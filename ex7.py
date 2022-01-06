@@ -28,28 +28,24 @@ for i in methods:
     response_post = requests.post("https://playground.learnqa.ru/ajax/api/compare_query_type", data=i)
     try:
         if "success" in json.loads(response_post.text):
-            print("POST запрос успешен с методом", i) 
-            print(response_post.status_code)       
+            print("POST запрос успешен с методом", i)     
     except:
         pass  
     response_put = requests.put("https://playground.learnqa.ru/ajax/api/compare_query_type", data=i)
     try:
         if "success" in json.loads(response_put.text):
-                print("PUT запрос успешен с методом", i)    
-                print(response_put.status_code)    
+                print("PUT запрос успешен с методом", i)     
     except:
         pass  
     response_get = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type", params=i)
     try:
         if "success" in json.loads(response_get.text):
-            print("GET запрос успешен с методом", i)
-            print(response_get.status_code)        
+            print("GET запрос успешен с методом", i)     
     except:
         pass       
     response_delete = requests.delete("https://playground.learnqa.ru/ajax/api/compare_query_type", data=i)
     try:
         if "success" in json.loads(response_delete.text):
-            print("DELETE запрос успешен с методом", i)
-            print(response_delete.status_code)       
+            print("DELETE запрос успешен с методом", i)     
     except:
         pass   
